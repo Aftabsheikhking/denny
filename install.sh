@@ -14,24 +14,24 @@ echo -e "${GREEN}        INSTALLING AFTAB TOOL            ${NC}"
 echo -e "${CYAN}==========================================${NC}"
 echo ""
 
-# Check if 'batman' file exists
-if [ ! -f "batman" ]; then
-  echo -e "${RED}[✘] Error: 'batman' file not found in current directory!${NC}"
+# Check if 'aftab' file exists
+if [ ! -f "aftab" ]; then
+  echo -e "${RED}[✘] Error: 'aftab' file not found in current directory!${NC}"
   exit 1
 fi
 
 echo -e "${YELLOW}[*] Setting permissions...${NC}"
 sleep 1
-chmod +x batman
+chmod +x aftab
 
 echo -e "${YELLOW}[*] Moving to system bin...${NC}"
 sleep 1
 
 if [ -d "$PREFIX/bin" ]; then
-  mv -f batman $PREFIX/bin/
+  mv -f aftab $PREFIX/bin/
   INSTALL_PATH="$PREFIX/bin"
 elif [ -d "/usr/local/bin" ]; then
-  mv -f batman /usr/local/bin/
+  mv -f aftab /usr/local/bin/
   INSTALL_PATH="/usr/local/bin"
 else
   echo -e "${RED}[✘] Error: Installation path not found!${NC}"
@@ -44,5 +44,6 @@ echo -e "${CYAN}------------------------------------------${NC}"
 echo -e "${GREEN}      INSTALLATION COMPLETE BITXXH ❤️✅           ${NC}"
 echo -e "${CYAN}------------------------------------------${NC}"
 echo -e "${YELLOW}Now you can run the tool by Jatiin:${NC}"
-echo -e "${BLUE}>> batman${NC}"
+echo -e "${BLUE}>> aftab${NC}"
 echo ""
+
